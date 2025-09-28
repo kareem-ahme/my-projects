@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ganatak": {
+    "zouq": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ganatak",
+            "outputPath": "dist/zouq",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -30,23 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/swiper-bundle.min.css",
-              "src/assets/css/odometer.css",
-              "src/assets/css/lightcase.css",
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/style.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/js/jquery.js",
-              "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/swiper-bundle.min.js",
-              "src/assets/js/odometer.js",
-              "src/assets/js/isotope.pkgd.min.js",
-              "src/assets/js/lightcase.js",
-              "src/assets/js/viewport.jquery.js",
-              "src/assets/js/custom.js"
-            ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -58,28 +44,21 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "7mb",
+                  "maximumWarning": "5mb",
                   "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "10kb",
-                  "maximumError": "30kb"
+                  "maximumWarning": "512kb",
+                  "maximumError": "512kb"
                 }
               ],
-             
-              "outputHashing": "all", "optimization": { "fonts": false }
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -88,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ganatak:build:production"
+              "buildTarget": "zouq:build:production"
             },
             "development": {
-              "buildTarget": "ganatak:build:development"
+              "buildTarget": "zouq:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ganatak:build"
+            "buildTarget": "zouq:build"
           }
         },
         "test": {
@@ -116,25 +95,15 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "src/assets/js/jquery.js",
-              "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/swiper-bundle.min.js",
-              "src/assets/js/odometer.js",
-              "src/assets/js/isotope.pkgd.min.js",
-              "src/assets/js/lightcase.js",
-              "src/assets/js/viewport.jquery.js",
-              "src/assets/js/custom.js"
-            ]
+            "scripts": []
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "9dbf804e-c158-44e0-b463-5df53fa65127"
+    "analytics": "134a50ac-a5ec-442b-8c7a-143ba266c0a2"
   }
 }
